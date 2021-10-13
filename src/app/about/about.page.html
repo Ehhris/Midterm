@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center" color="light" >DETAILS</ion-title>
+  </ion-toolbar>
+  <ion-segment value="contact" (ionChange)="segmentChanged($event)" color="dark">
+    <ion-segment-button value="contact">
+      <ion-label>CONTACT US</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="about">
+      <ion-label>ABOUT</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content style="--background: var(--ion-eris-background);">
+  <ion-card *ngIf ="selectedSegment === 'contact'">
+    <ion-card-content>
+      <h3>Follow us here:</h3>
+      <ion-grid>
+        <ion-row>
+          <ion-col><ion-icon size ="large" name="logo-facebook" ></ion-icon></ion-col>
+          <ion-col><ion-icon size ="large" name="logo-instagram" ></ion-icon></ion-col>
+          <ion-col><ion-icon size ="large" name="logo-twitter" ></ion-icon></ion-col>
+          <ion-col><ion-icon size ="large" name="logo-github" ></ion-icon></ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-item-divider>
+        <ion-label>
+         Or write an email to us
+        </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Your email</ion-label>
+        <ion-textarea rows="1" cols="20" placeholder="Enter email here..."></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-textarea rows="1" cols="20" placeholder="Enter title here..."></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Message</ion-label>
+        <ion-textarea rows="5" cols="20" placeholder="Enter any message here..."></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-col>
+          <ion-button size="large" type="submit" color="danger" expand="block" (click)="onSubmit()">Submit</ion-button>
+        </ion-col>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="selectedSegment === 'about'">
+    <ion-card-header><img src="/assets/icon/ITW.png"></ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <h1>ABOUT</h1>
+      <h3>I'm Eris R. Mendoza, I grew in Pampanga living a simple life. I graduated with honor as an ICT student at Don Jesus Gonzales High School and with a special award of “Best in ICT”. I want to pursue my dream career so I decided to reside in Olongapo City to study, since it’s my mother’s hometown and she finished her study there. I am currently an IT student at Gordon College and a member of a student dance troupe called, “PASE BALLO".
+      </h3>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

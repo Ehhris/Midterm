@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">FORGET PASSWORD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: var(--ion-eris-background);">
+  <ion-grid>
+    <ion-row>
+      <br><br><br><br><br><br><br><br><br><br>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <form>
+          <ion-item lines="full">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" required></ion-input>
+          </ion-item>
+      
+          <ion-row>
+            <ion-col>
+              <ion-button size="large" stype="submit" color="danger" expand="block" (click)="onSubmit()">Send</ion-button>
+            </ion-col>
+          </ion-row>
+      
+          <medium>
+            Please provide the username or email address that you used when you signed
+            up. We will send a reset password and instruction through the email you proveded.
+          </medium>
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row></ion-row>
+  </ion-grid>
+</ion-content>
